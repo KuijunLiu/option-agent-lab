@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "option-agent-lab"
+version = "0.2.0"
+description = "A reproducible neural option-pricer testing experiment"
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.26", "scipy>=1.13", "torch>=2.2", "matplotlib>=3.8"]
+
+[project.optional-dependencies]
+test = ["pytest>=8"]
+oracle = ["QuantLib>=1.35"]
+
+[tool.setuptools.packages.find]
+include = ["option_agent_lab*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]

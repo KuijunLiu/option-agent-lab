@@ -1,0 +1,54 @@
+{
+  "kind": "synthetic_black_scholes",
+  "features": [
+    "m",
+    "T",
+    "sigma"
+  ],
+  "feature_meanings": [
+    "spot / strike",
+    "years to expiry",
+    "annualized volatility"
+  ],
+  "target": "European call price / strike",
+  "strike": 100.0,
+  "rate": 0.02,
+  "dividend_yield": 0,
+  "bounds": [
+    [
+      0.5,
+      1.5
+    ],
+    [
+      0.0027397260273972603,
+      1.0
+    ],
+    [
+      0.05,
+      0.8
+    ]
+  ],
+  "splits": {
+    "train": {
+      "n": 32768,
+      "seed": 20260929,
+      "sha256_arrays": "467d1b430c46ba2bff79f54b2eec3e9346eceaff1ba16f483ed7e2c10b969c03"
+    },
+    "validation": {
+      "n": 4096,
+      "seed": 20260930,
+      "sha256_arrays": "f42427b1f974cd243caa3f0ef1e9b786a70bf514a0cf8ea38441127d8f0f7043"
+    },
+    "test": {
+      "n": 8192,
+      "seed": 20260931,
+      "sha256_arrays": "a5be27ebca49ab6bda8d3415e7bb28ffcdf77353d65028cb9c83de982fe5d8fc"
+    },
+    "stress": {
+      "n": 8192,
+      "seed": 20260932,
+      "sha256_arrays": "167b364a2ef775262067d167758fb5c65583d3a9f1eaca60117d42d4f96e8481"
+    }
+  },
+  "stress_description": "Independent diagnostic draw: m uniform[.9,1.1], T log-uniform in full domain; NOT used by search or training."
+}

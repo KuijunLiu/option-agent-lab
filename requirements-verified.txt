@@ -1,0 +1,7 @@
+# Versions used for the delivered CPU experiment; pyproject.toml allows compatible alternatives.
+numpy==2.3.5
+scipy==1.17.0
+torch==2.14.0
+matplotlib==3.10.8
+pytest==9.1.1
+QuantLib==1.43

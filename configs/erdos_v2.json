@@ -1,0 +1,22 @@
+{
+  "protocol_version": "erdos-v2.0",
+  "development_run": "runs/demo",
+  "model_seeds": [17, 29, 43],
+  "data_seeds": [20261001, 20261011, 20261021],
+  "search_seeds": [701, 702, 703],
+  "development_search_seeds": [801, 802, 803],
+  "de_populations": [16, 32, 64],
+  "epochs": 200,
+  "train_n": 32768,
+  "validation_n": 4096,
+  "audit_n": 8192,
+  "evaluation_budget": 1024,
+  "initial_points": 128,
+  "batch_size": 128,
+  "conditions": ["no_feedback", "feedback"],
+  "execution_order_seed": 426,
+  "primary_objective": "maximum absolute C/K pricing error found",
+  "price_failure_threshold": 0.001,
+  "delta_diagnostic_threshold": 0.05,
+  "delta_role": "independent audit diagnostic only; never search feedback or selection criterion"
+}

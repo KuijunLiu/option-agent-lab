@@ -1,0 +1,42 @@
+{
+  "dataset_name": "QuantLib published European call option reference values",
+  "purpose": "Independent numerical oracle regression fixtures; never training, validation, or search data.",
+  "retrieved_utc": "2026-09-29",
+  "upstream_repository": "https://github.com/lballabio/QuantLib",
+  "source_commit": "aaed737ba0d11a95b1df4c97c256c500275884df",
+  "source_commit_date": "2026-09-25T08:01:14Z",
+  "source_url": "https://github.com/lballabio/QuantLib/blob/aaed737ba0d11a95b1df4c97c256c500275884df/test-suite/europeanoption.cpp",
+  "raw_source_url": "https://raw.githubusercontent.com/lballabio/QuantLib/aaed737ba0d11a95b1df4c97c256c500275884df/test-suite/europeanoption.cpp",
+  "source_sha256": "61fb55f394cbb91e551572ab5a3b836bc206c82c5c6c8c777813471e1f170070",
+  "source_test": "BOOST_AUTO_TEST_CASE(testValues)",
+  "upstream_attribution": "E. G. Haug, Option pricing formulas, McGraw-Hill, 1998; as published in the QuantLib test suite.",
+  "upstream_file_copyright": [
+    "Copyright (C) 2003, 2007 Ferdinando Ametrano",
+    "Copyright (C) 2003, 2007 StatPro Italia srl",
+    "Copyright (C) 2009 Klaus Spanderen"
+  ],
+  "license": "QuantLib license (permissive); see third_party/QUANTLIB_LICENSE.txt",
+  "license_url": "https://github.com/lballabio/QuantLib/blob/aaed737ba0d11a95b1df4c97c256c500275884df/LICENSE.TXT",
+  "license_sha256": "7d3534ae321ed6351ef3bf2ee26fd577e3a0d2f657b3f2e3876d8971770a1dc4",
+  "transformation": "Select all Option::Call rows from testValues; rename/reorder columns, retain numerical values without recalculation. source_row is 1-based upstream line number.",
+  "row_count": 22,
+  "zero_dividend_rows": 1,
+  "units": {
+    "spot": "currency units",
+    "strike": "currency units",
+    "dividend_yield": "annual continuously compounded decimal",
+    "rate": "annual continuously compounded decimal",
+    "maturity_years": "year fraction supplied by source, not calendar-day recomputation",
+    "volatility": "annualized decimal",
+    "expected_price": "currency units per underlying unit",
+    "absolute_tolerance": "currency units"
+  },
+  "date_convention": "QuantLib source uses Actual360 and timeToDays(t); all selected t*360 are integral. Retaining the supplied t reproduces the source times exactly.",
+  "precision": "Expected prices rounded to four decimals by source; use supplied 1e-4 absolute tolerance. Do not treat expected_price as full precision.",
+  "local_independent_formula_check": {
+    "implementation": "Python standard library math.erfc normal CDF, no repo pricer imported",
+    "maximum_absolute_error": 5.54272350645757e-05,
+    "all_within_upstream_tolerance": true
+  },
+  "csv_sha256": "1b464333337b6da3d97c1bd72a5c1ecb749bd008ad2d95e46a07516987ad82a1"
+}
