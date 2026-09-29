@@ -1,0 +1,18 @@
+{
+  "bounds": {
+    "m": [
+      0.9,
+      1.05
+    ],
+    "T": [
+      0.0027397260273972603,
+      0.05
+    ],
+    "sigma": [
+      0.5,
+      0.8
+    ]
+  },
+  "n": 128,
+  "reason": "Initial feedback had its largest error at m=0.953,T=0.035,sigma=0.753. Probe nearby short-maturity, near-money, high-volatility options and include the shortest allowed maturity."
+}

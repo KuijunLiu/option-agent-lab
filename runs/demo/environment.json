@@ -1,0 +1,14 @@
+{
+  "python": "3.12.14",
+  "platform": "Linux-6.18.44-x86_64-with-glibc2.39",
+  "packages": {
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "torch": "2.14.0",
+    "matplotlib": "3.10.8",
+    "pytest": "9.1.1",
+    "QuantLib": "1.43"
+  },
+  "training_device": "CPU",
+  "torch_threads": 2
+}

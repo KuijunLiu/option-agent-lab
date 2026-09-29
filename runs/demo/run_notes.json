@@ -1,0 +1,16 @@
+{
+  "date_utc": "2026-09-29",
+  "actual_flow": [
+    "generate synthetic data",
+    "train one CPU network",
+    "assistant feedback pilot: initial128 +7adaptive batches",
+    "3baselines with5searchseeds",
+    "independent test/stress audit",
+    "generate report"
+  ],
+  "data_integrity": "All4delivered NPZ array hashes verified; regenerated arrays identical to training inputs",
+  "initial_sampling": "Actual pilot and all3baselines at seed123 match the first128points within1e-15",
+  "tests": "43 passed, including22publishedfixtures and100random QuantLib oracle comparisons",
+  "resolved_issue": "First generation produced an empty train.npz; cause was not reproduced. Regeneration succeeded. Generator now atomically publishes verified NPZ files.",
+  "codex_cli": "Not installed/authenticated here; help and missing-CLI handling checked, real CLI model call not executed"
+}

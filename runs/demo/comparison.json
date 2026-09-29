@@ -1,0 +1,26 @@
+[
+  {
+    "method": "random",
+    "repeats": 5,
+    "max_error_price_mean": 1.8897744897788207,
+    "max_error_price_std": 0.8871850438043585,
+    "failure_regions_mean": 95.0,
+    "seconds_mean": 0.0020797360002688947
+  },
+  {
+    "method": "sobol",
+    "repeats": 5,
+    "max_error_price_mean": 2.0462314475802224,
+    "max_error_price_std": 0.5450815098126752,
+    "failure_regions_mean": 102.4,
+    "seconds_mean": 0.005606804000126431
+  },
+  {
+    "method": "differential_evolution",
+    "repeats": 5,
+    "max_error_price_mean": 2.9077464287238852,
+    "max_error_price_std": 0.5326809220951162,
+    "failure_regions_mean": 102.4,
+    "seconds_mean": 0.04069833040011872
+  }
+]

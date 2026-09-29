@@ -1,0 +1,626 @@
+{
+  "budget": 1024,
+  "seed": 123,
+  "used": 1024,
+  "round": 8,
+  "history": [
+    {
+      "round": 1,
+      "proposal": {
+        "bounds": {
+          "m": [
+            0.5,
+            1.5
+          ],
+          "T": [
+            0.0027397260273972603,
+            1.0
+          ],
+          "sigma": [
+            0.05,
+            0.8
+          ]
+        },
+        "n": 128,
+        "reason": "Controller-fixed full-domain initial batch, identical to the baseline start at seed 123."
+      },
+      "sampler": "sobol",
+      "sampler_seed": 123,
+      "evaluation_seconds": 0.025452166999457404,
+      "summary": {
+        "n": 128,
+        "mae_normalized": 0.0015474165256152655,
+        "rmse_normalized": 0.002366870660575933,
+        "max_error_normalized": 0.011298148839266914,
+        "p99_error_normalized": 0.008706263085353718,
+        "failures": 65,
+        "failure_fraction": 0.5078125,
+        "failure_regions": 46,
+        "bound_violations": 19,
+        "top_points": [
+          {
+            "m": 0.953248979523778,
+            "T": 0.03489525685571645,
+            "sigma": 0.7530282134655863,
+            "error_normalized": 0.011298148839266914,
+            "reference_normalized": 0.03476004400989233,
+            "prediction_normalized": 0.04605819284915924
+          },
+          {
+            "m": 1.3466173894703388,
+            "T": 0.006435516690962935,
+            "sigma": 0.5744945036247373,
+            "error_normalized": 0.008764837659371805,
+            "reference_normalized": 0.3467460915217528,
+            "prediction_normalized": 0.337981253862381
+          },
+          {
+            "m": 1.0066925818100572,
+            "T": 0.06459182465117272,
+            "sigma": 0.10759299267083407,
+            "error_normalized": 0.008547894792638146,
+            "reference_normalized": 0.015390265597023643,
+            "prediction_normalized": 0.02393816038966179
+          },
+          {
+            "m": 0.9724617330357432,
+            "T": 0.708366244071967,
+            "sigma": 0.07920463355258107,
+            "error_normalized": 0.007826032685139879,
+            "reference_normalized": 0.019853151766559378,
+            "prediction_normalized": 0.027679184451699257
+          },
+          {
+            "m": 1.2240010052919388,
+            "T": 0.9204494110525471,
+            "sigma": 0.08783907159231603,
+            "error_normalized": 0.005043593404121083,
+            "reference_normalized": 0.24236961936695067,
+            "prediction_normalized": 0.2373260259628296
+          }
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "proposal": {
+        "bounds": {
+          "m": [
+            0.9,
+            1.05
+          ],
+          "T": [
+            0.0027397260273972603,
+            0.05
+          ],
+          "sigma": [
+            0.5,
+            0.8
+          ]
+        },
+        "n": 128,
+        "reason": "Initial feedback had its largest error at m=0.953,T=0.035,sigma=0.753. Probe nearby short-maturity, near-money, high-volatility options and include the shortest allowed maturity."
+      },
+      "sampler": "sobol",
+      "sampler_seed": 124,
+      "evaluation_seconds": 0.04279440299978887,
+      "summary": {
+        "n": 128,
+        "mae_normalized": 0.01321971087358113,
+        "rmse_normalized": 0.014856495437047722,
+        "max_error_normalized": 0.038147157391667505,
+        "p99_error_normalized": 0.03115364005466864,
+        "failures": 128,
+        "failure_fraction": 1.0,
+        "failure_regions": 6,
+        "bound_violations": 0,
+        "top_points": [
+          {
+            "m": 0.990877813892439,
+            "T": 0.0031650549183561377,
+            "sigma": 0.7588021147064865,
+            "error_normalized": 0.038147157391667505,
+            "reference_normalized": 0.012805306950449805,
+            "prediction_normalized": 0.05095246434211731
+          },
+          {
+            "m": 1.0335773260798307,
+            "T": 0.0036903017462065367,
+            "sigma": 0.7160751012153924,
+            "error_normalized": 0.03135681082516996,
+            "reference_normalized": 0.03934232215374621,
+            "prediction_normalized": 0.07069913297891617
+          },
+          {
+            "m": 1.0307970080059021,
+            "T": 0.006561854821055719,
+            "sigma": 0.7669605974107981,
+            "error_normalized": 0.030604326489979884,
+            "reference_normalized": 0.043589888748114446,
+            "prediction_normalized": 0.07419421523809433
+          },
+          {
+            "m": 1.0061114042066037,
+            "T": 0.004438584786520837,
+            "sigma": 0.6412797383964062,
+            "error_normalized": 0.03002681909434955,
+            "reference_normalized": 0.020373028234313324,
+            "prediction_normalized": 0.05039984732866287
+          },
+          {
+            "m": 0.9538674215320498,
+            "T": 0.007814741112317329,
+            "sigma": 0.7953874280676246,
+            "error_normalized": 0.028718417673547415,
+            "reference_normalized": 0.010324368090193126,
+            "prediction_normalized": 0.03904278576374054
+          }
+        ]
+      }
+    },
+    {
+      "round": 3,
+      "proposal": {
+        "bounds": {
+          "m": [
+            0.97,
+            1.04
+          ],
+          "T": [
+            0.0027397260273972603,
+            0.006
+          ],
+          "sigma": [
+            0.72,
+            0.8
+          ]
+        },
+        "n": 128,
+        "reason": "Round2 increased the maximum error to0.0381 near m=0.991,T=0.00317,sigma=0.759. Refine that region toward the maturity boundary and highest volatility to test whether the peak persists."
+      },
+      "sampler": "sobol",
+      "sampler_seed": 125,
+      "evaluation_seconds": 0.029570840999440406,
+      "summary": {
+        "n": 128,
+        "mae_normalized": 0.034883291105572395,
+        "rmse_normalized": 0.03496360594303398,
+        "max_error_normalized": 0.040490804569167906,
+        "p99_error_normalized": 0.04025406291992537,
+        "failures": 128,
+        "failure_fraction": 1.0,
+        "failure_regions": 2,
+        "bound_violations": 0,
+        "top_points": [
+          {
+            "m": 0.9902672432083637,
+            "T": 0.0028044670596973943,
+            "sigma": 0.7861550548672677,
+            "error_normalized": 0.040490804569167906,
+            "reference_normalized": 0.012136893017845339,
+            "prediction_normalized": 0.052627697587013245
+          },
+          {
+            "m": 1.0082884522154927,
+            "T": 0.0031091923389890016,
+            "sigma": 0.794134309515357,
+            "error_normalized": 0.04027979616818243,
+            "reference_normalized": 0.022223951473857823,
+            "prediction_normalized": 0.06250374764204025
+          },
+          {
+            "m": 0.9855166739039123,
+            "T": 0.002990684056042196,
+            "sigma": 0.7955005232244731,
+            "error_normalized": 0.04018448784130442,
+            "reference_normalized": 0.010967957534614926,
+            "prediction_normalized": 0.05115244537591934
+          },
+          {
+            "m": 1.0029637143202126,
+            "T": 0.0032244392695186075,
+            "sigma": 0.7904040697962046,
+            "error_normalized": 0.04000927234736459,
+            "reference_normalized": 0.019484716405000525,
+            "prediction_normalized": 0.05949398875236511
+          },
+          {
+            "m": 0.996404065778479,
+            "T": 0.0035693109891798396,
+            "sigma": 0.7982544266432524,
+            "error_normalized": 0.0396674321602584,
+            "reference_normalized": 0.01727888271105279,
+            "prediction_normalized": 0.05694631487131119
+          }
+        ]
+      }
+    },
+    {
+      "round": 4,
+      "proposal": {
+        "bounds": {
+          "m": [
+            0.985,
+            1.015
+          ],
+          "T": [
+            0.0027397260273972603,
+            0.0032
+          ],
+          "sigma": [
+            0.785,
+            0.8
+          ]
+        },
+        "n": 128,
+        "reason": "Round3 confirmed errors above0.040 around near-money options at the shortest maturity and high volatility. Refine the observed ridge while retaining m values on both sides of1."
+      },
+      "sampler": "sobol",
+      "sampler_seed": 126,
+      "evaluation_seconds": 0.02642234299946722,
+      "summary": {
+        "n": 128,
+        "mae_normalized": 0.04051721421147382,
+        "rmse_normalized": 0.0405199627127468,
+        "max_error_normalized": 0.04151099315369493,
+        "p99_error_normalized": 0.0414775242912206,
+        "failures": 128,
+        "failure_fraction": 1.0,
+        "failure_regions": 2,
+        "bound_violations": 0,
+        "top_points": [
+          {
+            "m": 1.0042141738161443,
+            "T": 0.0027635308060744036,
+            "sigma": 0.7973320195870475,
+            "error_normalized": 0.04151099315369493,
+            "reference_normalized": 0.0189764783672058,
+            "prediction_normalized": 0.060487471520900726
+          },
+          {
+            "m": 0.9964032340422272,
+            "T": 0.0028003719850558124,
+            "sigma": 0.7979019009089098,
+            "error_normalized": 0.04147953516726126,
+            "reference_normalized": 0.015101753408864837,
+            "prediction_normalized": 0.0565812885761261
+          },
+          {
+            "m": 1.0019717227481304,
+            "T": 0.0028324868938694263,
+            "sigma": 0.7987582659441979,
+            "error_normalized": 0.041472087478221765,
+            "reference_normalized": 0.018007782423912176,
+            "prediction_normalized": 0.05947986990213394
+          },
+          {
+            "m": 0.9946587940864264,
+            "T": 0.0027955871174392636,
+            "sigma": 0.7983907161094249,
+            "error_normalized": 0.041465368414378076,
+            "reference_normalized": 0.014283586000943274,
+            "prediction_normalized": 0.05574895441532135
+          },
+          {
+            "m": 0.9977502392139286,
+            "T": 0.0027509380596753667,
+            "sigma": 0.7939856134075672,
+            "error_normalized": 0.04140467240787011,
+            "reference_normalized": 0.015518947994942849,
+            "prediction_normalized": 0.05692362040281296
+          }
+        ]
+      }
+    },
+    {
+      "round": 5,
+      "proposal": {
+        "bounds": {
+          "m": [
+            0.95,
+            1.05
+          ],
+          "T": [
+            0.0027397260273972603,
+            0.12
+          ],
+          "sigma": [
+            0.05,
+            0.15
+          ]
+        },
+        "n": 128,
+        "reason": "The high-volatility near-expiry peak is well localized. Initial feedback also showed near-money low-volatility errors; explore that distinct regime to discover additional failure regions rather than spend every point on one ridge."
+      },
+      "sampler": "sobol",
+      "sampler_seed": 127,
+      "evaluation_seconds": 0.024696774999938498,
+      "summary": {
+        "n": 128,
+        "mae_normalized": 0.006367426349178661,
+        "rmse_normalized": 0.00718467517886823,
+        "max_error_normalized": 0.013090996426908107,
+        "p99_error_normalized": 0.012915254973204827,
+        "failures": 124,
+        "failure_fraction": 0.96875,
+        "failure_regions": 6,
+        "bound_violations": 0,
+        "top_points": [
+          {
+            "m": 0.9987542915157974,
+            "T": 0.0427926998340512,
+            "sigma": 0.06498780250549316,
+            "error_normalized": 0.013090996426908107,
+            "reference_normalized": 0.005164710449608236,
+            "prediction_normalized": 0.018255706876516342
+          },
+          {
+            "m": 0.9884108658879995,
+            "T": 0.003666818312382045,
+            "sigma": 0.07105357944965363,
+            "error_normalized": 0.01291785530178871,
+            "reference_normalized": 4.651477643586866e-06,
+            "prediction_normalized": 0.012922506779432297
+          },
+          {
+            "m": 1.0014062563888728,
+            "T": 0.07065599448672713,
+            "sigma": 0.05246853195130825,
+            "error_normalized": 0.012908224455181739,
+            "reference_normalized": 0.007086300783689836,
+            "prediction_normalized": 0.019994525238871574
+          },
+          {
+            "m": 1.0037630239501596,
+            "T": 0.01160523287645758,
+            "sigma": 0.14467197880148885,
+            "error_normalized": 0.012714087804764702,
+            "reference_normalized": 0.008428853163510368,
+            "prediction_normalized": 0.02114294096827507
+          },
+          {
+            "m": 1.0102782541885973,
+            "T": 0.006570444840886822,
+            "sigma": 0.09477673005312681,
+            "error_normalized": 0.012709652251302685,
+            "reference_normalized": 0.010726691046059642,
+            "prediction_normalized": 0.023436343297362328
+          }
+        ]
+      }
+    },
+    {
+      "round": 6,
+      "proposal": {
+        "bounds": {
+          "m": [
+            1.2,
+            1.5
+          ],
+          "T": [
+            0.0027397260273972603,
+            0.03
+          ],
+          "sigma": [
+            0.4,
+            0.8
+          ]
+        },
+        "n": 128,
+        "reason": "Initial full-domain feedback showed a large underpricing error at m=1.347,T=0.00644,sigma=0.574. Test short-dated in-the-money options as a different failure mechanism from the near-money overpricing ridge."
+      },
+      "sampler": "sobol",
+      "sampler_seed": 128,
+      "evaluation_seconds": 0.02847697800007154,
+      "summary": {
+        "n": 128,
+        "mae_normalized": 0.005870033579971469,
+        "rmse_normalized": 0.006441211793622747,
+        "max_error_normalized": 0.013672134012165327,
+        "p99_error_normalized": 0.012696886731885371,
+        "failures": 126,
+        "failure_fraction": 0.984375,
+        "failure_regions": 4,
+        "bound_violations": 126,
+        "top_points": [
+          {
+            "m": 1.3561813890002667,
+            "T": 0.0036248300813954987,
+            "sigma": 0.7859387662261725,
+            "error_normalized": 0.013672134012165327,
+            "reference_normalized": 0.35625388297456767,
+            "prediction_normalized": 0.34258174896240234
+          },
+          {
+            "m": 1.301868730969727,
+            "T": 0.003097267039247776,
+            "sigma": 0.768012311309576,
+            "error_normalized": 0.012919195970383601,
+            "reference_normalized": 0.30193067439445587,
+            "prediction_normalized": 0.28901147842407227
+          },
+          {
+            "m": 1.3480420771054924,
+            "T": 0.005542707386464901,
+            "sigma": 0.6910629652440547,
+            "error_normalized": 0.012095828420390142,
+            "reference_normalized": 0.34815292514013196,
+            "prediction_normalized": 0.3360570967197418
+          },
+          {
+            "m": 1.335918983258307,
+            "T": 0.009067348980485168,
+            "sigma": 0.7496976178139448,
+            "error_normalized": 0.011845925025240678,
+            "reference_normalized": 0.3361007656376522,
+            "prediction_normalized": 0.3242548406124115
+          },
+          {
+            "m": 1.3280347877182066,
+            "T": 0.009570701414566129,
+            "sigma": 0.710928561538458,
+            "error_normalized": 0.011342628996602155,
+            "reference_normalized": 0.3282265804221545,
+            "prediction_normalized": 0.31688395142555237
+          }
+        ]
+      }
+    },
+    {
+      "round": 7,
+      "proposal": {
+        "bounds": {
+          "m": [
+            0.85,
+            1.2
+          ],
+          "T": [
+            0.5,
+            1.0
+          ],
+          "sigma": [
+            0.05,
+            0.15
+          ]
+        },
+        "n": 128,
+        "reason": "Initial feedback also showed errors at long maturity and low volatility, around m=0.972,T=0.708 and m=1.224,T=0.92. Explore this distinct longer-dated low-volatility regime before the final peak-refinement batch."
+      },
+      "sampler": "sobol",
+      "sampler_seed": 129,
+      "evaluation_seconds": 0.024965039000562683,
+      "summary": {
+        "n": 128,
+        "mae_normalized": 0.0029306186795385507,
+        "rmse_normalized": 0.003847130080752384,
+        "max_error_normalized": 0.011396245379165181,
+        "p99_error_normalized": 0.01037971774896033,
+        "failures": 101,
+        "failure_fraction": 0.7890625,
+        "failure_regions": 4,
+        "bound_violations": 22,
+        "top_points": [
+          {
+            "m": 0.990845038741827,
+            "T": 0.7569288262166083,
+            "sigma": 0.053506985772401094,
+            "error_normalized": 0.011396245379165181,
+            "reference_normalized": 0.02142935497669839,
+            "prediction_normalized": 0.03282560035586357
+          },
+          {
+            "m": 0.9662012596614659,
+            "T": 0.7243386879563332,
+            "sigma": 0.05562894549220801,
+            "error_normalized": 0.010705022542224824,
+            "reference_normalized": 0.010326489405287803,
+            "prediction_normalized": 0.021031511947512627
+          },
+          {
+            "m": 0.9717293466441332,
+            "T": 0.9943567970767617,
+            "sigma": 0.06935429833829403,
+            "error_normalized": 0.009500189974578532,
+            "reference_normalized": 0.02285032783481249,
+            "prediction_normalized": 0.03235051780939102
+          },
+          {
+            "m": 0.9561863529961556,
+            "T": 0.8318061190657318,
+            "sigma": 0.06362201999872923,
+            "error_normalized": 0.009326518198009275,
+            "reference_normalized": 0.011382955441717364,
+            "prediction_normalized": 0.02070947363972664
+          },
+          {
+            "m": 1.0081190577242523,
+            "T": 0.9207917600870132,
+            "sigma": 0.06080482816323638,
+            "error_normalized": 0.00894457714302263,
+            "reference_normalized": 0.038686708941629316,
+            "prediction_normalized": 0.04763128608465195
+          }
+        ]
+      }
+    },
+    {
+      "round": 8,
+      "proposal": {
+        "bounds": {
+          "m": [
+            0.995,
+            1.007
+          ],
+          "T": [
+            0.0027397260273972603,
+            0.00285
+          ],
+          "sigma": [
+            0.797,
+            0.8
+          ]
+        },
+        "n": 128,
+        "reason": "The largest observed errors remain the round4 near-money, shortest-maturity, high-volatility ridge (~0.0415 normalized). Spend the last batch refining the observed peak near m=1 and the domain boundaries; other explored regimes were much smaller."
+      },
+      "sampler": "sobol",
+      "sampler_seed": 130,
+      "evaluation_seconds": 0.0248458739997659,
+      "summary": {
+        "n": 128,
+        "mae_normalized": 0.04152183527881784,
+        "rmse_normalized": 0.041521979603232846,
+        "max_error_normalized": 0.041774855337268664,
+        "p99_error_normalized": 0.041752237782148975,
+        "failures": 128,
+        "failure_fraction": 1.0,
+        "failure_regions": 2,
+        "bound_violations": 0,
+        "top_points": [
+          {
+            "m": 0.9975459979251027,
+            "T": 0.002741630200375739,
+            "sigma": 0.7999345384621993,
+            "error_normalized": 0.041774855337268664,
+            "reference_normalized": 0.01551537833439653,
+            "prediction_normalized": 0.05729023367166519
+          },
+          {
+            "m": 1.0002912261225283,
+            "T": 0.002739755226729744,
+            "sigma": 0.7992427540738136,
+            "error_normalized": 0.04175725080721385,
+            "reference_normalized": 0.01686388752706044,
+            "prediction_normalized": 0.05862113833427429
+          },
+          {
+            "m": 1.00115204423666,
+            "T": 0.0027469000406288987,
+            "sigma": 0.7993448130292818,
+            "error_normalized": 0.04173868404771433,
+            "reference_normalized": 0.017331798802360437,
+            "prediction_normalized": 0.05907048285007477
+          },
+          {
+            "m": 1.0009739154167472,
+            "T": 0.002754161735867112,
+            "sigma": 0.7996356260264292,
+            "error_normalized": 0.04173855092583302,
+            "reference_normalized": 0.01726758871020671,
+            "prediction_normalized": 0.059006139636039734
+          },
+          {
+            "m": 0.998451472248882,
+            "T": 0.002752627129601442,
+            "sigma": 0.7995665315287188,
+            "error_normalized": 0.04173676506359669,
+            "reference_normalized": 0.015984715663599047,
+            "prediction_normalized": 0.05772148072719574
+          }
+        ]
+      }
+    }
+  ],
+  "checkpoint_sha256": "b6f4a317dd084f9359cd6f06753618bdd37924f5dea074ca978620e9e32d30db",
+  "threshold_normalized": 0.001
+}

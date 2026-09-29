@@ -1,0 +1,18 @@
+{
+  "bounds": {
+    "m": [
+      0.985,
+      1.015
+    ],
+    "T": [
+      0.0027397260273972603,
+      0.0032
+    ],
+    "sigma": [
+      0.785,
+      0.8
+    ]
+  },
+  "n": 128,
+  "reason": "Round3 confirmed errors above0.040 around near-money options at the shortest maturity and high volatility. Refine the observed ridge while retaining m values on both sides of1."
+}

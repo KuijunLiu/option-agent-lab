@@ -1,0 +1,18 @@
+{
+  "bounds": {
+    "m": [
+      0.97,
+      1.04
+    ],
+    "T": [
+      0.0027397260273972603,
+      0.006
+    ],
+    "sigma": [
+      0.72,
+      0.8
+    ]
+  },
+  "n": 128,
+  "reason": "Round2 increased the maximum error to0.0381 near m=0.991,T=0.00317,sigma=0.759. Refine that region toward the maturity boundary and highest volatility to test whether the peak persists."
+}

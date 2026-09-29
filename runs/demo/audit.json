@@ -1,0 +1,108 @@
+{
+  "test": {
+    "n": 8192,
+    "mae_normalized": 0.0015332225616331292,
+    "rmse_normalized": 0.002177809437543469,
+    "max_error_normalized": 0.025498911321665787,
+    "p99_error_normalized": 0.007480417093876766,
+    "failures": 4559,
+    "failure_fraction": 0.5565185546875,
+    "failure_regions": 119,
+    "bound_violations": 1185,
+    "top_points": [
+      {
+        "m": 0.9735124632824812,
+        "T": 0.008100873421202508,
+        "sigma": 0.6749391032215601,
+        "error_normalized": 0.025498911321665787,
+        "reference_normalized": 0.0130145479435663,
+        "prediction_normalized": 0.038513459265232086
+      },
+      {
+        "m": 0.995711088782042,
+        "T": 0.01441877486918286,
+        "sigma": 0.7411290824841206,
+        "error_normalized": 0.02311670456475476,
+        "reference_normalized": 0.03344593520813724,
+        "prediction_normalized": 0.056562639772892
+      },
+      {
+        "m": 0.958319220691402,
+        "T": 0.014797370714607311,
+        "sigma": 0.7301837871560002,
+        "error_normalized": 0.020787843301812037,
+        "reference_normalized": 0.017840429410418645,
+        "prediction_normalized": 0.03862827271223068
+      },
+      {
+        "m": 1.0432895410072929,
+        "T": 0.0046039283800795115,
+        "sigma": 0.5568231979064489,
+        "error_normalized": 0.020259426214447276,
+        "reference_normalized": 0.04590547712827657,
+        "prediction_normalized": 0.06616490334272385
+      },
+      {
+        "m": 1.0003977555942591,
+        "T": 0.00792141565424272,
+        "sigma": 0.4331025564352821,
+        "error_normalized": 0.01860688306523507,
+        "reference_normalized": 0.015658657474983285,
+        "prediction_normalized": 0.03426554054021835
+      }
+    ]
+  },
+  "stress": {
+    "n": 8192,
+    "mae_normalized": 0.006362645050181033,
+    "rmse_normalized": 0.009507252274303523,
+    "max_error_normalized": 0.04137437301329626,
+    "p99_error_normalized": 0.03143778672453239,
+    "failures": 6951,
+    "failure_fraction": 0.8485107421875,
+    "failure_regions": 80,
+    "bound_violations": 664,
+    "top_points": [
+      {
+        "m": 1.001775607476144,
+        "T": 0.002765015220709891,
+        "sigma": 0.7940804415533038,
+        "error_normalized": 0.04137437301329626,
+        "reference_normalized": 0.01760258269854532,
+        "prediction_normalized": 0.05897695571184158
+      },
+      {
+        "m": 0.9916997591955032,
+        "T": 0.00309193670918589,
+        "sigma": 0.7941980289919678,
+        "error_normalized": 0.040354790855564676,
+        "reference_normalized": 0.013730493615947168,
+        "prediction_normalized": 0.05408528447151184
+      },
+      {
+        "m": 0.993873876522367,
+        "T": 0.0027624769800918695,
+        "sigma": 0.7747730535514596,
+        "error_normalized": 0.04014762292339576,
+        "reference_normalized": 0.013339484234311456,
+        "prediction_normalized": 0.053487107157707214
+      },
+      {
+        "m": 0.9898966770094871,
+        "T": 0.0029796792912156647,
+        "sigma": 0.7741439010135857,
+        "error_normalized": 0.03935851266484235,
+        "reference_normalized": 0.012225865220022456,
+        "prediction_normalized": 0.05158437788486481
+      },
+      {
+        "m": 0.9780996542559455,
+        "T": 0.003053035678153945,
+        "sigma": 0.7977272674469262,
+        "error_normalized": 0.03926017499727667,
+        "reference_normalized": 0.00860778250532686,
+        "prediction_normalized": 0.04786795750260353
+      }
+    ]
+  }
+}

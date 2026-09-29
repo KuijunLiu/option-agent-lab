@@ -1,0 +1,18 @@
+{
+  "bounds": {
+    "m": [
+      1.2,
+      1.5
+    ],
+    "T": [
+      0.0027397260273972603,
+      0.03
+    ],
+    "sigma": [
+      0.4,
+      0.8
+    ]
+  },
+  "n": 128,
+  "reason": "Initial full-domain feedback showed a large underpricing error at m=1.347,T=0.00644,sigma=0.574. Test short-dated in-the-money options as a different failure mechanism from the near-money overpricing ridge."
+}

@@ -1,0 +1,46 @@
+{
+  "seed": 7,
+  "nrows": {
+    "train": 32768,
+    "validation": 4096,
+    "test": 8192
+  },
+  "best_epoch": 200,
+  "epochs_run": 200,
+  "train_seconds": 10.620474462999482,
+  "metadata": {
+    "architecture": "3-64-64-1 MLP; SiLU hidden activations; linear output",
+    "input_features": [
+      "S/K",
+      "T_years",
+      "sigma"
+    ],
+    "target": "C/K",
+    "bounds": [
+      [
+        0.5,
+        1.5
+      ],
+      [
+        0.0027397260273972603,
+        1.0
+      ],
+      [
+        0.05,
+        0.8
+      ]
+    ],
+    "risk_free_rate": 0.02,
+    "strike": 100.0,
+    "input_scaling": "fixed bounds mapped to [-1, 1]",
+    "output_clipping": false,
+    "training_seed": 7,
+    "best_epoch": 200
+  },
+  "validation_mae_normalized": 0.001541545209020917,
+  "validation_rmse_normalized": 0.002147608681143796,
+  "validation_max_abs_error_normalized": 0.02593198982069854,
+  "test_mae_normalized": 0.0015332225482180824,
+  "test_rmse_normalized": 0.002177809425444858,
+  "test_max_abs_error_normalized": 0.025498911321665787
+}

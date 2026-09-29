@@ -1,0 +1,18 @@
+{
+  "bounds": {
+    "m": [
+      0.5,
+      1.5
+    ],
+    "T": [
+      0.0027397260273972603,
+      1.0
+    ],
+    "sigma": [
+      0.05,
+      0.8
+    ]
+  },
+  "n": 128,
+  "reason": "Controller-fixed full-domain initial batch, identical to the baseline start at seed 123."
+}

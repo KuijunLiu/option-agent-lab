@@ -1,0 +1,15 @@
+{
+  "kind": "assistant_guided_feasibility_pilot",
+  "controller": "Current chat assistant using Python tools, not local Codex CLI",
+  "date_utc": "2026-09-29",
+  "initial_batch": "128 common full-domain Sobol points at seed123",
+  "adaptive_decisions": 7,
+  "total_budget": 1024,
+  "visible_feedback": "Per-round summaries with top5 points; decisions did not use fixed audit or competing search results",
+  "limitations": [
+    "One pilot only; no statistical claim of LLM superiority",
+    "Assistant had project and finance context, so this is not an enforced blind experiment",
+    "Assistant prompts, token usage and end-to-end LLM cost are not reproducibly metered by this prototype"
+  ],
+  "replay": "Proposals are stored as proposal_001.json through proposal_008.json; replay exactly against the frozen checkpoint at seed123."
+}

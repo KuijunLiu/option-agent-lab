@@ -1,0 +1,18 @@
+{
+  "bounds": {
+    "m": [
+      0.995,
+      1.007
+    ],
+    "T": [
+      0.0027397260273972603,
+      0.00285
+    ],
+    "sigma": [
+      0.797,
+      0.8
+    ]
+  },
+  "n": 128,
+  "reason": "The largest observed errors remain the round4 near-money, shortest-maturity, high-volatility ridge (~0.0415 normalized). Spend the last batch refining the observed peak near m=1 and the domain boundaries; other explored regimes were much smaller."
+}
